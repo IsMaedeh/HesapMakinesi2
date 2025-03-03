@@ -78,13 +78,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String buttonText = button.getText().toString();
         String dataToCalculate = textView.getText().toString();
 
-        if(buttonText.equals("AC")){
-            textView.setText("");
+        if(buttonText.equals("=")) {
+            textView.setText(textView.getText());
             return;
         }
-        
         if(buttonText.equals("C")){
-            dataToCalculate = dataToCalculate.substring(0,dataToCalculate.length()-1);
+            textView.setText("");
+            return;
         }else{
             dataToCalculate = dataToCalculate+buttonText;
         }
